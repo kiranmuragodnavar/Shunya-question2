@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index1.html')
+    return render_template('index.html')
 
 @app.route('/play', methods=['POST'])
 def play():
@@ -58,7 +58,7 @@ def play():
 
     #end of co-ordinates.py file
     
-    return render_template('index1.html', message=coords)
+    return render_template('index.html', message=coords)
 
 if __name__ == '__main__':
     app.run(debug=True)
