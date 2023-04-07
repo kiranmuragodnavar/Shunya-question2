@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Word Guessing Game </title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" style="width:1000px">
+        <h1>
+            <center>Guess the word</center>
+        </h1>
+        <div class="content">
+            <input type="text" class="typing-input" maxlength="1" />
+            <div class="inputs">
+                <form action="/play" method="POST">
+                    <label>
+                        <center>Enter the Key</center>
+                    </label>
+                    <div style="display: flex;align-items: center;justify-content: center;">
+                        <input type="number" min="1" max="15" name="guessed_array1" required/>
+                        <input type="number" min="1" max="15" name="guessed_array2" required/>
+                        <input type="number" min="1" max="15" name="guessed_array3" required/>
+                        <input type="number" min="1" max="15" name="guessed_array4" required/>
+                    </div>
+                    <br>
+                    <label>
+                        <center>Enter the Signal</center>
+                    </label>
+                    <input type="number" step="any" name="guessed_signal1" required/>
+                    <input type="number" step="any" name="guessed_signal2" required/>
+                    <input type="number" step="any" name="guessed_signal3" required/>
+                    <input type="number" step="any" name="guessed_signal4" required/>
+                    <input type="number" step="any" name="guessed_signal5" required/>
+                    <input type="number" step="any" name="guessed_signal6" required/>
+                    <input type="number" step="any" name="guessed_signal7" required/>
+                    <input type="number" step="any" name="guessed_signal8" required/>
+                    <input type="number" step="any" name="guessed_signal9" required/>
+                    <input type="number" step="any" name="guessed_signal10" required/>
+                    <input type="number" step="any" name="guessed_signal11" required/>
+                    <input type="number" step="any" name="guessed_signal12" required/>
+                    <br>
+                    <br>
+                    <div style="display: flex;align-items: center;justify-content: center;">
+                        <button type="submit" class="reset-btn" style="width:100px;">Submit</button>
+                    </div>
+                </form>
+                <br>
+                <p>{{message}}</p>
+            </div>
+        </div>
+    </div>
+    <br>
+</body>
+
+</html>
